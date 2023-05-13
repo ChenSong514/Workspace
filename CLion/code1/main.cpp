@@ -1,7 +1,14 @@
 #include<stdio.h>
 
 
+void foo1();
+
 int main() {
+    foo1();
+
+}
+
+void foo1() {
     void sort(float score[], int size);
     float score[5];
     printf("请输入5个数字:");
@@ -11,7 +18,6 @@ int main() {
     for (int i = 0; i < 5; ++i) {
         printf("%.2f ", score[i]);
     }
-
 }
 
 /**
