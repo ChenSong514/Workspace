@@ -1,11 +1,61 @@
 #include<stdio.h>
+#include <stdlib.h>
 
+
+int getLength(char *str);
+
+int main() {
+
+    char *str;
+    str = (char *) malloc(sizeof(char));
+    printf("请输入字符串:\n");
+    gets(str);
+    int len = getLength(str);
+    printf("字符串 %s 的长度是:%d\n", str, len);
+}
+
+int getLength(char *str) {
+    int len = 0;
+    while (*str) {
+        str++;
+        len++;
+    }
+    return len;
+}
+
+
+void sort(int *p) {
+    for (int i = 0; i < 3; ++i) {
+        for (int j = i; j < 3; ++j) {
+            if (*(p + i) < *(p + j)) {
+                int tmp = *(p + i);
+                *(p + i) = *(p + j);
+                *(p + j) = tmp;
+            }
+        }
+    }
+}
 
 void foo1();
 
-int main() {
-    foo1();
+void print_val(int *x) {
+    printf("%d\n", ++*x);
+}
 
+int *f(int *x, int *y) {
+    if (*x < *y) {
+        return x;
+    } else {
+        return y;
+    }
+}
+
+
+#include <string.h>
+
+
+int fun(double x[10], int *n) {
+    printf("echo");
 }
 
 void foo1() {
